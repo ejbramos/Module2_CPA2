@@ -1,7 +1,9 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Stack;
 
-class postfix {
+class postfix1 {
 
     public static void main(String argv[]) throws IOException
     {
@@ -56,10 +58,16 @@ class postfix {
     }
     static int prec(char x)
     {
-        if (x == '+' || x == '-')
+        if (x == '¬')
             return 1;
-        if (x == '*' || x == '/' || x == '%')
+        if (x == '∧' || x == '↑' )
             return 2;
+        if (x == '∨' || x == '↓' || x == '⊻')
+            return 3;
+        if (x == '→' )
+            return 4;
+        if (x == '↔' )
+            return 5;
         return 0;
     }
 }
