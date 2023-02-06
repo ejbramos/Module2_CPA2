@@ -15,7 +15,7 @@ class prefix {
         System.out.print("\nEnter the infix expression you want to convert: ");
         infix = keyboard.readLine();
 //output as postfix
-        System.out.println("Postfix expression for the given infix expression is:" + toPrefix(reverseInfix(infix)));
+        System.out.println("Prefix expression for the given infix expression is:" + toPrefix(reverseInfix(infix)));
 
     }
 

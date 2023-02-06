@@ -1,23 +1,23 @@
-public class MyStack implements StackInterface {
+public class MyStack<E> implements StackInterface<E> {
 
-    private int size = 100;
-    public Object[] array = new Object[size];
-    private int ptr = -1;
+    int size = 10;
+    E[] array = (E[]) new Object[size];
+    int ptr = -1;
+
 
     @Override
-    public void push(Object j) throws StackFullException {
+    public void push(E j) throws StackFullException {
     ptr++;
     array[ptr] = j;
     }
     @Override
     public void pop() throws StackEmptyException {
         array[ptr] = null;
-        System.out.println(array[ptr]);
         ptr--;
 
     }
     @Override
-    public Object top() throws StackEmptyException {
+    public E top() throws StackEmptyException {
         return array[ptr];
     }
     @Override

@@ -1,13 +1,12 @@
 public class StackTest {
     public static void main(String[] args){
-        MyStack stack = new MyStack();
+        MyStack<String> stack = new MyStack<>();
 
         for (int i = 0; i < 100; i++) {
-            stack.push("Gwapo");
+            stack.push("Push");
+            System.out.println(stack.isFull());
         }
-        for (int i = 0; i < 100; i++) {
-            stack.pop();
-        }
+
 
     }
 }

@@ -8,7 +8,7 @@ public class decToBin {
 
         System.out.println("");
         Scanner input = new Scanner(System.in);
-        System.out.println("Input Number");
+        System.out.println("Input Number: ");
         int num = input.nextInt();
 
         while (num >= 1){
